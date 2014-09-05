@@ -8,8 +8,8 @@
 
 #import "TDViewController.h"
 #import "TDTableViewController.h"
-static NSMutableArray*toDoDictionaryArray = nil;
-static NSMutableArray*toBuyDictionaryArray = nil;
+static NSMutableDictionary*toDoDictionary = nil;
+static NSMutableDictionary*toBuyDictionary = nil;
 @interface TDViewController ()
 @property (strong,nonatomic) TDTableViewController*tableViewController;
 @property (strong, nonatomic) IBOutlet UITextField *mainItemTextField;
@@ -30,10 +30,8 @@ static NSMutableArray*toBuyDictionaryArray = nil;
 
 - (void)viewDidLoad
 {
-    self.mainItemTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.descriptionTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    toBuyDictionaryArray = [[NSMutableArray alloc] init];
-    toDoDictionaryArray =[[NSMutableArray alloc] init];
+    toBuyDictionary = [NSMutableDictionary dictionary];
+    toDoDictionary = [NSMutableDictionary dictionary];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -50,28 +48,18 @@ static NSMutableArray*toBuyDictionaryArray = nil;
     [self.descriptionTextField resignFirstResponder];
     NSString*task = self.mainItemTextField.text;
     NSString*taskDescription = self.descriptionTextField.text;
-    NSMutableArray*toBuy = [[NSMutableArray alloc] init];
-    NSMutableArray*toDo = [[NSMutableArray alloc] init];
-    
-    
     
     if(self.switchController.selectedSegmentIndex==0){
-        [toBuy addObject:task];
-        [toBuy addObject:taskDescription];
-
-        [toBuyDictionaryArray addObject:toBuy];
-        NSLog(@"dictionary to Buy: %@", toBuyDictionaryArray);
+        [toBuyDictionary setObject:task forKey:taskDescription];
+        NSLog(@"dictionary to Buy: %@", toBuyDictionary);
         
         
     }
     else{
-        [toDo addObject:task];
-        [toDo addObject:taskDescription];
-        [toDoDictionaryArray addObject:toDo];
-        NSLog(@"dictionary to Do: %@", toDoDictionaryArray);
+        [toDoDictionary setObject:task forKey:taskDescription];
+        NSLog(@"dictionary to Do: %@", toDoDictionary);
         
     }
-    
 }
 
 - (IBAction)showListButton:(id)sender {
@@ -89,14 +77,14 @@ static NSMutableArray*toBuyDictionaryArray = nil;
 
     
 }
-+ (NSMutableArray*)toDoDictionaryMethod{
++ (NSMutableDictionary*)toDoDictionaryMethod{
     
-    return toDoDictionaryArray;
+    return toDoDictionary;
     
 }
-+ (NSMutableArray*)toBuyDictionaryMethod{
-    NSLog(@"dictionary to Buy in method: %@", toBuyDictionaryArray);
-    return toBuyDictionaryArray;
++ (NSMutableDictionary*)toBuyDictionaryMethod{
+    NSLog(@"dictionary to Buy in method: %@", toBuyDictionary);
+    return toBuyDictionary;
    
     
 }

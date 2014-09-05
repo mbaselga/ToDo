@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		157036FF17EC12F700C29BBC /* TDAppDelegate in Resources */ = {isa = PBXBuildFile; fileRef = 157036FE17EC12F700C29BBC /* TDAppDelegate */; };
+		1570370117EC130E00C29BBC /* TDTableViewController in Resources */ = {isa = PBXBuildFile; fileRef = 1570370017EC130E00C29BBC /* TDTableViewController */; };
+		1570370317EC132100C29BBC /* TDViewController in Resources */ = {isa = PBXBuildFile; fileRef = 1570370217EC132100C29BBC /* TDViewController */; };
 		15CBEF7A17E634F70020F35D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CBEF7917E634F70020F35D /* UIKit.framework */; };
 		15CBEF7C17E634F70020F35D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CBEF7B17E634F70020F35D /* Foundation.framework */; };
 		15CBEF7E17E634F70020F35D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CBEF7D17E634F70020F35D /* CoreGraphics.framework */; };
@@ -18,9 +21,13 @@
 		15CBEF9017E634F70020F35D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15CBEF8F17E634F70020F35D /* Default-568h@2x.png */; };
 		15CBEF9317E634F70020F35D /* TDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CBEF9217E634F70020F35D /* TDViewController.m */; };
 		15CBEF9617E634F70020F35D /* TDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CBEF9417E634F70020F35D /* TDViewController.xib */; };
+		15E2A63F17EBA78600AF0A46 /* TDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E2A63E17EBA78600AF0A46 /* TDTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		157036FE17EC12F700C29BBC /* TDAppDelegate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TDAppDelegate; path = ../../../../TDAppDelegate; sourceTree = "<group>"; };
+		1570370017EC130E00C29BBC /* TDTableViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TDTableViewController; path = ../../../../TDTableViewController; sourceTree = "<group>"; };
+		1570370217EC132100C29BBC /* TDViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TDViewController; sourceTree = "<group>"; };
 		15CBEF7617E634F70020F35D /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CBEF7917E634F70020F35D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		15CBEF7B17E634F70020F35D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +44,8 @@
 		15CBEF9117E634F70020F35D /* TDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDViewController.h; sourceTree = "<group>"; };
 		15CBEF9217E634F70020F35D /* TDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDViewController.m; sourceTree = "<group>"; };
 		15CBEF9517E634F70020F35D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TDViewController.xib; sourceTree = "<group>"; };
+		15E2A63D17EBA78600AF0A46 /* TDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTableViewController.h; sourceTree = "<group>"; };
+		15E2A63E17EBA78600AF0A46 /* TDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +93,14 @@
 			isa = PBXGroup;
 			children = (
 				15CBEF8817E634F70020F35D /* TDAppDelegate.h */,
+				157036FE17EC12F700C29BBC /* TDAppDelegate */,
 				15CBEF8917E634F70020F35D /* TDAppDelegate.m */,
 				15CBEF9117E634F70020F35D /* TDViewController.h */,
 				15CBEF9217E634F70020F35D /* TDViewController.m */,
+				1570370217EC132100C29BBC /* TDViewController */,
+				15E2A63D17EBA78600AF0A46 /* TDTableViewController.h */,
+				15E2A63E17EBA78600AF0A46 /* TDTableViewController.m */,
+				1570370017EC130E00C29BBC /* TDTableViewController */,
 				15CBEF9417E634F70020F35D /* TDViewController.xib */,
 				15CBEF8017E634F70020F35D /* Supporting Files */,
 			);
@@ -164,6 +178,9 @@
 				15CBEF8E17E634F70020F35D /* Default@2x.png in Resources */,
 				15CBEF9017E634F70020F35D /* Default-568h@2x.png in Resources */,
 				15CBEF9617E634F70020F35D /* TDViewController.xib in Resources */,
+				157036FF17EC12F700C29BBC /* TDAppDelegate in Resources */,
+				1570370117EC130E00C29BBC /* TDTableViewController in Resources */,
+				1570370317EC132100C29BBC /* TDViewController in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +194,7 @@
 				15CBEF8617E634F70020F35D /* main.m in Sources */,
 				15CBEF8A17E634F70020F35D /* TDAppDelegate.m in Sources */,
 				15CBEF9317E634F70020F35D /* TDViewController.m in Sources */,
+				15E2A63F17EBA78600AF0A46 /* TDTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +317,7 @@
 				15CBEF9B17E634F70020F35D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
